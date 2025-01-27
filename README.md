@@ -1,19 +1,18 @@
-
-# Lead Time and Cycle Time in Pipelined Systems: A Comprehensive Framework
+# Throughput Time and Cycle Time in Pipelined Systems: A Comprehensive Framework
 
 ## Abstract
-This paper presents a detailed framework for understanding **lead time** and **cycle time** in pipelined systems, emphasizing their roles in system performance and efficiency. **Cycle time**, as the primary determinant of throughput, is analyzed using bottleneck principles, while **lead time** offers insight into the system's total latency. The latter half of the paper explores the impact of input flow rates on system behavior, highlighting how exceeding the system throughput leads to queue growth and linear increases in total cycle time. Applications span domains such as manufacturing, networking, and software systems.
+This paper presents a detailed framework for understanding **throughput time** and **cycle time** in pipelined systems, emphasizing their roles in system performance and efficiency. **Cycle time**, as the primary determinant of throughput, is analyzed using bottleneck principles, while **throughput time** offers insight into the system's total latency. The latter half of the paper explores the impact of input flow rates on system behavior, highlighting how exceeding the system throughput throughputs to queue growth and linear increases in total cycle time. Applications span domains such as manufacturing, networking, and software systems.
 
 ---
 
 ## Introduction
 Pipelined systems enhance efficiency by breaking processes into sequential stages. In such systems:
 - **Cycle time** determines throughput, governed by the slowest stage or bottleneck.
-- **Lead time** measures total latency, representing the time taken for a single unit to traverse the pipeline.
+- **Throughput time** measures total latency, representing the time taken for a single unit to traverse the pipeline.
 
-While cycle time and lead time are interrelated, they serve distinct purposes:
+While cycle time and throughput time are interrelated, they serve distinct purposes:
 - **Cycle time** is crucial for analyzing throughput.
-- **Lead time** provides a latency perspective, particularly important for real-time applications.
+- **Throughput time** provides a latency perspective, particularly important for real-time applications.
 
 This paper provides a unified framework to analyze these metrics, emphasizing cycle time as the primary determinant of throughput and exploring input flow dynamics as a critical factor in system behavior.
 
@@ -36,15 +35,15 @@ $$
 \text{Cycle Time of System} = \max(\text{Cycle Times of Subsystems})
 $$
 
-### 2. Lead Time
-- **Lead Time of a Stage**: The time it takes for one unit to traverse the stage.
-- **Lead Time of a Subsystem**: The sum of the lead times of its stages.
-- **Lead Time of a System**: The sum of the lead times of its subsystems.
+### 2. Throughput Time
+- **Throughput Time of a Stage**: The time it takes for one unit to traverse the stage.
+- **Throughput Time of a Subsystem**: The sum of the throughput times of its stages.
+- **Throughput Time of a System**: The sum of the throughput times of its subsystems.
 
 Mathematically:
 
 $$
-\text{Lead Time of System} = \sum_{i} \text{Lead Time of Subsystem}_i
+\text{Throughput Time of System} = \sum_{i} \text{Throughput Time of Subsystem}_i
 $$
 
 ---
@@ -60,11 +59,11 @@ $$
 \text{Cycle Time of System} = \max(\text{Cycle Times of Subsystems})
 $$
 
-### 2. Lead Time as Additive Latency
-Lead time represents the total time for a unit to traverse all subsystems. In a sequential pipeline, lead time is calculated as the sum of lead times across all subsystems:
+### 2. Throughput Time as Additive Latency
+Throughput time represents the total time for a unit to traverse all subsystems. In a sequential pipeline, throughput time is calculated as the sum of throughput times across all subsystems:
 
 $$
-\text{Lead Time of System} = \sum_{i} \text{Lead Time of Subsystem}_i
+\text{Throughput Time of System} = \sum_{i} \text{Throughput Time of Subsystem}_i
 $$
 
 ---
@@ -186,6 +185,6 @@ $$
 ---
 
 ## Conclusion
-This paper provides a comprehensive framework for analyzing **cycle time** and **lead time** in pipelined systems, emphasizing cycle time as the primary determinant of throughput. It further explores the impact of input flow rates, showing how exceeding system throughput leads to queue growth and linear increases in total cycle time. By integrating these principles, this framework offers practical tools for optimizing complex systems across various domains, including manufacturing, networking, and software systems.
+This paper provides a comprehensive framework for analyzing **cycle time** and **throughput time** in pipelined systems, emphasizing cycle time as the primary determinant of throughput. It further explores the impact of input flow rates, showing how exceeding system throughput throughputs to queue growth and linear increases in total cycle time. By integrating these principles, this framework offers practical tools for optimizing complex systems across various domains, including manufacturing, networking, and software systems.
 
 ---
